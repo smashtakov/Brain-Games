@@ -2,7 +2,7 @@
   "name": "braingames",
   "version": "1.0.0",
   "description": "project1",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
