@@ -7,3 +7,6 @@ Brain Even
 
 Brain Calc
 <a href="https://asciinema.org/a/MfbDqrHAZI20COVPHCD9gNd54" target="_blank"><img src="https://asciinema.org/a/MfbDqrHAZI20COVPHCD9gNd54.svg" /></a>
+
+Brain GCD
+<a href="https://asciinema.org/a/r6LfCq5bngFNn7qdvGoQjFDsA" target="_blank"><img src="https://asciinema.org/a/r6LfCq5bngFNn7qdvGoQjFDsA.svg" /></a>
