@@ -8,3 +8,6 @@ lint:
 	npx eslint .
 test:
 	npm test
+build:
+	npm publish --dry-run
+	sudo npm link

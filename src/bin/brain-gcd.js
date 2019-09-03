@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import findGcd from '../games/gcd';
+import findGcd from '../games/gameEngine';
 
-findGcd();
+findGcd('brain-gcd');
