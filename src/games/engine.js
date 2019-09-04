@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// game engine which calculate count of correct answers(3) and output answer
+// function getSpecifics does have name of game as argument and return pair (question, answer)
 
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
@@ -6,17 +8,14 @@ import getGreetingPhrase from './greetings';
 import getSpecifics from './specifics';
 
 export default (nameOfGame) => {
-  console.log('Welcome to the Brain Games!');
-  console.log(getGreetingPhrase(nameOfGame));
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\n`);
+  const name = getGreetingPhrase(nameOfGame);
 
   let counterOfCorrectAnswers = 0;
   const totalOfCorrectAnswer = 3;
   while (counterOfCorrectAnswers < totalOfCorrectAnswer && counterOfCorrectAnswers >= 0) {
-    const questionAndAnswer = getSpecifics(nameOfGame);
+    const questionAndAnswer = getSpecifics(nameOfGame); // getSpecifics return pair
     console.log(`Question: ${car(questionAndAnswer)}`);
-    const result = String(cdr(questionAndAnswer));
+    const result = String(cdr(questionAndAnswer)); // string for compare result and answer
     const answer = readlineSync.question('Your answer: ');
     if (result === answer) {
       console.log('Correct!');
@@ -26,9 +25,5 @@ export default (nameOfGame) => {
       counterOfCorrectAnswers = -1;
     }
   }
-  if (counterOfCorrectAnswers === totalOfCorrectAnswer) {
-    console.log(`Congratulations, ${name}!`);
-  } else {
-    console.log(`Let's try again, ${name}!`);
-  }
+  return (counterOfCorrectAnswers === totalOfCorrectAnswer) ? (console.log(`Congratulations, ${name}!`)) : (console.log(`Let's try again, ${name}!`));
 };

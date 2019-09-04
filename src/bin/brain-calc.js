@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import isCalc from '../games/gameEngine';
+import defineCalc from '../games/engine';
 
-isCalc('brain-calc');
+defineCalc('brain-calc');

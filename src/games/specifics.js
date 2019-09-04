@@ -1,22 +1,24 @@
 #!/usr/bin/env node
 
+import isEven from './specifics/even';
+import getCalc from './specifics/calc';
+import getGCD from './specifics/gcd';
 import getProgression from './specifics/progression';
-import isEven from './specifics/isEven';
-import calc from './specifics/calc';
-import gcd from './specifics/gcd';
-import welcome from '../index';
+import isPrime from './specifics/prime';
 
+// eslint-disable-next-line consistent-return
 export default (nameOfGame) => {
   switch (nameOfGame) {
     case 'brain-even':
       return isEven();
     case 'brain-calc':
-      return calc();
+      return getCalc();
     case 'brain-gcd':
-      return gcd();
+      return getGCD();
     case 'brain-progression':
       return getProgression();
+    case 'brain-prime':
+      return isPrime();
     default:
-      return welcome();
   }
 };

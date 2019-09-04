@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import askName from '..';
+import defineWelcome from '../index';
 
-askName();
+defineWelcome();
