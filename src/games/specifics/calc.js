@@ -2,7 +2,7 @@
 
 import { cons } from '@hexlet/pairs';
 
-// get sign with random function help
+// get sign with random function help. 1/3 and 2/3 for equally probable assignment of sign
 const getSign = (mathRandom) => {
   if (mathRandom > 2 / 3) {
     return '*';

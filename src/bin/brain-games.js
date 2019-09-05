@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import defineWelcome from '../index';
+import defineWelcome from '..';
 
 defineWelcome();

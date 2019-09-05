@@ -4,6 +4,7 @@ import { cons } from '@hexlet/pairs';
 
 const getNumber = () => Math.floor(Math.random() * 100);
 
+// trial division algorithm
 const getResult = (number) => {
   if (number < 2) {
     return 'no';
