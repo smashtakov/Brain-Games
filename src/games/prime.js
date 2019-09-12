@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import getRandomNumber from '../random-number';
-import isPrimeNumber from '../check-prime';
+import getRandomNumber from '../assist_func/random-number';
+import isPrimeNumber from '../assist_func/check-prime';
 import runEngine from '../engine';
 
 const generateQuestionAndAnswer = () => {

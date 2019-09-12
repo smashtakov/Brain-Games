@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import getRandomNumber from '../random-number';
-import isEven from '../check-even';
+import getRandomNumber from '../assist_func/random-number';
+import isEven from '../assist_func/check-even';
 import runEngine from '../engine';
 
 const generateQuestionAndAnswer = () => {
