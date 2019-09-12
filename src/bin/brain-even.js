@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import defineIsEven from '../games/engine';
+import runEvenGame from '../games/even';
 
-defineIsEven('brain-even');
+runEvenGame();

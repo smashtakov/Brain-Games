@@ -24,9 +24,9 @@ export default (nameOfGame = 'brain-games') => {
     default:
   }
   console.log(greeting);
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\n`);
+  const inputName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${inputName}!\n`);
   if (greeting !== 'Welcome to the Brain Games!\n') {
-    return name; // do not have return for default value
+    return inputName; // do not have return for default value
   }
 };

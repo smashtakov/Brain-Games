@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import defineGCD from '../games/engine';
+import runGcdGame from '../games/gcd';
 
-defineGCD('brain-gcd');
+runGcdGame();

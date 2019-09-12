@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getGreetingPhrase from './games/greetings';
+import getGreetingPhrase from './greetings';
 
 export default () => getGreetingPhrase();
