@@ -1,7 +1,7 @@
 // game engine calculates count of correct answers(3)
 import readlineSync from 'readline-sync';
-import getName from './assist_func/name';
 import { car, cdr } from '@hexlet/pairs';
+import getName from './assist_func/name';
 
 export default (generatePair) => {
   const playerName = getName('return name');

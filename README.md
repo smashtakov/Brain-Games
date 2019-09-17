@@ -3,16 +3,22 @@
 
 ## **Description**
 
-Simple games for fun:
-brain-even: is it even number?
-brain-calc: calculate result of the expression.
-brain-gcd: find the greatest common divisor of given numbers.
-brain-progression: find is missing number in the progression.
-brain-prime: is it prime number?
+>Simple games for fun:
+>brain-even: is it even number?
+>brain-calc: calculate result of the expression.
+>brain-gcd: find the greatest common divisor of given numbers.
+>brain-progression: find is missing number in the progression.
+>brain-prime: is it prime number?
 
 ## **Install and run**
 ```
-sdff
+$ npm i @smashtakov/braingames
+$ brain-games           #welcome
+$ brain-even:           #run brain-even game
+$ brain-calc:           #run brain-calc game
+$ brain-gcd:            #run brain-gcd game
+$ brain-progression:    #run brain-progression game
+$ brain-prime:          #run brain-prime game
 ```
 ## **Examples**
 
