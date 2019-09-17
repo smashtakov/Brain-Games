@@ -2,6 +2,8 @@ import { cons } from '@hexlet/pairs';
 import getRandomNumber from '../assist_func/random-number';
 import runEngine from '../engine';
 
+console.log('Welcome to the Brain Games!\nFind the greatest common divisor of given numbers.\n');
+
 // Euclidean algorithm gcd
 const calculateGcd = (number1, number2) => {
   const iter = (num1, num2) => {
@@ -16,9 +18,11 @@ const calculateGcd = (number1, number2) => {
 };
 
 const generateQuestionAndAnswer = () => {
-  const number1 = getRandomNumber();
-  const number2 = getRandomNumber();
-  return cons((`${number1} ${number2}`), calculateGcd(number1, number2));
+  const firstNumber = getRandomNumber(1, 100);
+  const secondNumber = getRandomNumber(1, 100);
+  const givenNumbers = `${firstNumber} ${secondNumber}`;
+  const gcd = calculateGcd(firstNumber, secondNumber);
+  return cons(givenNumbers, gcd);
 };
 
-export default () => runEngine('brain-gcd', generateQuestionAndAnswer);
+export default () => runEngine(generateQuestionAndAnswer);

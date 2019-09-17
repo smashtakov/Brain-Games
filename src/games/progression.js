@@ -2,25 +2,26 @@ import { cons } from '@hexlet/pairs';
 import getRandomNumber from '../assist_func/random-number';
 import runEngine from '../engine';
 
-const generateQuestionAndAnswer = () => {
-  const firstNumberOfProgression = getRandomNumber(); // 1-99
-  const difference = getRandomNumber(10); // 0-9
-  const positionOfHiddenNumber = getRandomNumber(10); // 0-9 is a random position of lost number
-  const totalCountNumbersOfProgression = 10; // 10 is a count of progression numbers
-  let counter = 0; // is a counter
-  let resultSequence = '';
-  let hiddenNumber = 0;
+console.log('Welcome to the Brain Games!\nWhat number is missing in the progression?\n');
 
-  while (counter < totalCountNumbersOfProgression) {
-    if (counter === positionOfHiddenNumber) {
-      resultSequence = `${resultSequence}.. `;
-      hiddenNumber = firstNumberOfProgression + counter * difference; // value of hidden number
+const lengthOfProgression = 10;
+
+const generateQuestionAndAnswer = () => {
+  const first = getRandomNumber(1, 100);
+  const difference = getRandomNumber(1, 10);
+  const positionOfHiddenElement = getRandomNumber(1, lengthOfProgression);
+  let resultSequence = '';
+  let hiddenElement = 0;
+
+  for (let counter = 0; counter < lengthOfProgression; counter += 1) {
+    if (counter === positionOfHiddenElement) {
+      resultSequence = `${resultSequence} ..`;
+      hiddenElement = first + counter * difference; // value of hidden number
     } else {
-      resultSequence = `${resultSequence}${firstNumberOfProgression + counter * difference} `;
+      resultSequence = `${resultSequence} ${first + counter * difference}`;
     }
-    counter += 1;
   }
-  return cons(resultSequence, hiddenNumber);
+  return cons(resultSequence, hiddenElement);
 };
 
-export default () => runEngine('brain-progression', generateQuestionAndAnswer);
+export default () => runEngine(generateQuestionAndAnswer);

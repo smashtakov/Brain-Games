@@ -2,28 +2,34 @@ import { cons } from '@hexlet/pairs';
 import getRandomNumber from '../assist_func/random-number';
 import runEngine from '../engine';
 
+console.log('Welcome to the Brain Games!\nWhat is the result of the expression?\n');
+
 const getSign = () => {
   const signs = '+-*';
-  const index = Math.floor(Math.random() * signs.length);
+  const index = getRandomNumber(0, 3);
   return signs[index];
 };
 
-const getResultOfCalculation = (number1, sign = '+', number2) => {
+const getResultOfCalculation = (num1, sign, num2) => {
   switch (sign) {
     case '*':
-      return number1 * number2;
+      return num1 * num2;
     case '-':
-      return number1 - number2;
+      return num1 - num2;
+    case '+':
+      return num1 + num2;
     default:
-      return number1 + number2;
+      return null;
   }
 };
 
 const generateQuestionAndAnswer = () => {
-  const operand1 = getRandomNumber();
-  const operand2 = getRandomNumber(10); // 10 is a order of number for comfortable testing
+  const operand1 = getRandomNumber(1, 100);
+  const operand2 = getRandomNumber(1, 10);
   const sign = getSign();
-  return cons((`${operand1} ${sign} ${operand2}`), getResultOfCalculation(operand1, sign, operand2));
+  const expression = `${operand1} ${sign} ${operand2}`;
+  const result = getResultOfCalculation(operand1, sign, operand2);
+  return cons(expression, result);
 };
 
-export default () => runEngine('brain-calc', generateQuestionAndAnswer);
+export default () => runEngine(generateQuestionAndAnswer);

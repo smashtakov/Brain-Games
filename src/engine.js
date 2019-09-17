@@ -1,16 +1,14 @@
-// game engine which calculate count of correct answers(3) and output answer
-// function getSpecifics does have name of game as argument and returns pair (question, answer)
-
+// game engine calculates count of correct answers(3)
 import readlineSync from 'readline-sync';
+import getName from './assist_func/name';
 import { car, cdr } from '@hexlet/pairs';
-import getGreetingPhrase from './greetings';
 
-export default (nameOfGame, generatePair) => {
-  const playerName = getGreetingPhrase(nameOfGame);
+export default (generatePair) => {
+  const playerName = getName('return name');
 
   let counterOfCorrectAnswers = 0;
-  const needOfCorrectAnswer = 3;
-  while (counterOfCorrectAnswers < needOfCorrectAnswer && counterOfCorrectAnswers >= 0) {
+  const needCountOfCorrectAnswer = 3;
+  while (counterOfCorrectAnswers < needCountOfCorrectAnswer && counterOfCorrectAnswers >= 0) {
     const questionAndAnswer = generatePair();
     console.log(`Question: ${car(questionAndAnswer)}`);
     const correctAnswer = String(cdr(questionAndAnswer)); // string for compare result and answer
@@ -23,5 +21,5 @@ export default (nameOfGame, generatePair) => {
       counterOfCorrectAnswers = -1; // exit from cycle
     }
   }
-  return (counterOfCorrectAnswers === needOfCorrectAnswer) ? (console.log(`Congratulations, ${playerName}!`)) : (console.log(`Let's try again, ${playerName}!`));
+  return (counterOfCorrectAnswers === needCountOfCorrectAnswer) ? (console.log(`Congratulations, ${playerName}!`)) : (console.log(`Let's try again, ${playerName}!`));
 };
