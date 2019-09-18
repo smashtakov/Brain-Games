@@ -3,26 +3,32 @@
 
 ## **Description**
 
->Simple games for fun:
->brain-even: is it even number?
->brain-calc: calculate result of the expression.
->brain-gcd: find the greatest common divisor of given numbers.
->brain-progression: find is missing number in the progression.
->brain-prime: is it prime number?
+Simple games for fun:
+
+brain-even: is it even number?
+
+brain-calc: calculate result of the expression.
+
+brain-gcd: find the greatest common divisor of given numbers.
+
+brain-progression: find is missing number in the progression.
+
+brain-prime: is it prime number?
 
 ## **Install and run**
-```
-$ npm i @smashtakov/braingames
-$ brain-games           #welcome
-$ brain-even:           #run brain-even game
-$ brain-calc:           #run brain-calc game
-$ brain-gcd:            #run brain-gcd game
-$ brain-progression:    #run brain-progression game
-$ brain-prime:          #run brain-prime game
+```sh
+$ npm i @smashtakov/braingames  #install games
+$ brain-games                   #run welcome
+$ brain-even                    #run brain-even game
+$ brain-calc                    #run brain-calc game
+$ brain-gcd                     #run brain-gcd game
+$ brain-progression             #run brain-progression game
+$ brain-prime                   #run brain-prime game
 ```
 ## **Examples**
 
 ### Install
+<a href="https://asciinema.org/a/uHYcd8fjghG50TnAGhayjiXia" target="_blank"><img src="https://asciinema.org/a/uHYcd8fjghG50TnAGhayjiXia.svg" /></a>
 
 ### Brain Games
 <a href="https://asciinema.org/a/k86mOwGCeGnynQSus9mtQModP" target="_blank"><img src="https://asciinema.org/a/k86mOwGCeGnynQSus9mtQModP.svg" /></a>

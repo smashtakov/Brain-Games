@@ -16,7 +16,7 @@ const generateQuestionAndAnswer = () => {
   for (let counter = 0; counter < lengthOfProgression; counter += 1) {
     if (counter === positionOfHiddenElement) {
       resultSequence = `${resultSequence} ..`;
-      hiddenElement = first + counter * difference; // value of hidden number
+      hiddenElement = first + counter * difference;
     } else {
       resultSequence = `${resultSequence} ${first + counter * difference}`;
     }

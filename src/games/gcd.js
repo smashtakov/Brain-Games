@@ -18,10 +18,10 @@ const calculateGcd = (number1, number2) => {
 };
 
 const generateQuestionAndAnswer = () => {
-  const firstNumber = getRandomNumber(1, 100);
-  const secondNumber = getRandomNumber(1, 100);
-  const givenNumbers = `${firstNumber} ${secondNumber}`;
-  const gcd = calculateGcd(firstNumber, secondNumber);
+  const first = getRandomNumber(1, 100);
+  const second = getRandomNumber(1, 100);
+  const givenNumbers = `${first} ${second}`;
+  const gcd = calculateGcd(first, second);
   return cons(givenNumbers, gcd);
 };
 
