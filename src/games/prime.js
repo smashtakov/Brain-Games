@@ -1,25 +1,22 @@
 import { cons } from '@hexlet/pairs';
-import getRandomNumber from '../assist_func/random-number';
+import getRandomNumber from '../random-number';
 import runEngine from '../engine';
-
-console.log('Welcome to the Brain Games!\nAnswer "yes" if given number is prime. Otherwise answer "no".\n');
 
 // trial division algorithm
 const isPrime = (num) => {
-  const result = num > 2;
-  if (result === true) {
+  if ((num >= 2) === true) {
     for (let divisor = 2; divisor <= Math.sqrt(num); divisor += 1) {
       if (num % divisor === 0) {
-        return !result;
+        return false;
       }
     }
-  } return result;
+  } return num >= 2;
 };
 
 const generateQuestionAndAnswer = () => {
-  const objectOfQuestion = getRandomNumber(1, 100);
-  const answer = isPrime(objectOfQuestion) ? 'yes' : 'no';
-  return cons(objectOfQuestion, answer);
+  const question = getRandomNumber(1, 100);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return cons(question, answer);
 };
 
-export default () => runEngine(generateQuestionAndAnswer);
+export default () => runEngine('Welcome to the Brain Games!\nAnswer "yes" if given number is prime. Otherwise answer "no".\n', generateQuestionAndAnswer);

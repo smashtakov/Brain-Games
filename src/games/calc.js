@@ -1,16 +1,8 @@
 import { cons } from '@hexlet/pairs';
-import getRandomNumber from '../assist_func/random-number';
+import getRandomNumber from '../random-number';
 import runEngine from '../engine';
 
-console.log('Welcome to the Brain Games!\nWhat is the result of the expression?\n');
-
-const getSign = () => {
-  const signs = '+-*';
-  const index = getRandomNumber(0, 3);
-  return signs[index];
-};
-
-const getResultOfCalculation = (num1, sign, num2) => {
+const getResult = (num1, num2, sign) => {
   switch (sign) {
     case '*':
       return num1 * num2;
@@ -23,13 +15,15 @@ const getResultOfCalculation = (num1, sign, num2) => {
   }
 };
 
+const signs = '+-*';
+
 const generateQuestionAndAnswer = () => {
   const operand1 = getRandomNumber(1, 100);
   const operand2 = getRandomNumber(1, 10);
-  const sign = getSign();
-  const expression = `${operand1} ${sign} ${operand2}`;
-  const result = getResultOfCalculation(operand1, sign, operand2);
-  return cons(expression, result);
+  const sign = signs[getRandomNumber(0, signs.length - 1)];
+  const question = `${operand1} ${sign} ${operand2}`;
+  const answer = String(getResult(operand1, operand2, sign));
+  return cons(question, answer);
 };
 
-export default () => runEngine(generateQuestionAndAnswer);
+export default () => runEngine('Welcome to the Brain Games!\nWhat is the result of the expression?\n', generateQuestionAndAnswer);
