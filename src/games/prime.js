@@ -4,7 +4,7 @@ import runEngine from '../engine';
 
 // trial division algorithm
 const isPrime = (num) => {
-  if ((num >= 2) === true) {
+  if (num >= 2) {
     for (let divisor = 2; divisor <= Math.sqrt(num); divisor += 1) {
       if (num % divisor === 0) {
         return false;
@@ -19,4 +19,5 @@ const generateQuestionAndAnswer = () => {
   return cons(question, answer);
 };
 
-export default () => runEngine('Welcome to the Brain Games!\nAnswer "yes" if given number is prime. Otherwise answer "no".\n', generateQuestionAndAnswer);
+const ruleOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+export default () => runEngine(ruleOfGame, generateQuestionAndAnswer);

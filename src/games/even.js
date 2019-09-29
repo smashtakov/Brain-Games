@@ -10,4 +10,5 @@ const generateQuestionAndAnswer = () => {
   return cons(question, answer);
 };
 
-export default () => runEngine('Welcome to the Brain Games!\nAnswer "yes" if the number is even, otherwise answer "no".\n', generateQuestionAndAnswer);
+const ruleOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+export default () => runEngine(ruleOfGame, generateQuestionAndAnswer);

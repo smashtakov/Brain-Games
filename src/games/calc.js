@@ -16,7 +16,6 @@ const getResult = (num1, num2, sign) => {
 };
 
 const signs = '+-*';
-
 const generateQuestionAndAnswer = () => {
   const operand1 = getRandomNumber(1, 100);
   const operand2 = getRandomNumber(1, 10);
@@ -26,4 +25,5 @@ const generateQuestionAndAnswer = () => {
   return cons(question, answer);
 };
 
-export default () => runEngine('Welcome to the Brain Games!\nWhat is the result of the expression?\n', generateQuestionAndAnswer);
+const ruleOfGame = 'What is the result of the expression?';
+export default () => runEngine(ruleOfGame, generateQuestionAndAnswer);

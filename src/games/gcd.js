@@ -23,4 +23,5 @@ const generateQuestionAndAnswer = () => {
   return cons(question, answer);
 };
 
-export default () => runEngine('Welcome to the Brain Games!\nFind the greatest common divisor of given numbers.\n', generateQuestionAndAnswer);
+const ruleOfGame = 'Find the greatest common divisor of given numbers';
+export default () => runEngine(ruleOfGame, generateQuestionAndAnswer);
