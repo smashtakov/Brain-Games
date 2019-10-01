@@ -25,5 +25,5 @@ const generateQuestionAndAnswer = () => {
   return cons(question, answer);
 };
 
-const ruleOfGame = 'What is the result of the expression?';
-export default () => runEngine(ruleOfGame, generateQuestionAndAnswer);
+const description = 'What is the result of the expression?';
+export default () => runEngine(description, generateQuestionAndAnswer);

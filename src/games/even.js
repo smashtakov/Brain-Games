@@ -10,5 +10,5 @@ const generateQuestionAndAnswer = () => {
   return cons(question, answer);
 };
 
-const ruleOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
-export default () => runEngine(ruleOfGame, generateQuestionAndAnswer);
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+export default () => runEngine(description, generateQuestionAndAnswer);

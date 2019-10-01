@@ -23,5 +23,5 @@ const generateQuestionAndAnswer = () => {
   return cons(question, answer);
 };
 
-const ruleOfGame = 'Find the greatest common divisor of given numbers';
-export default () => runEngine(ruleOfGame, generateQuestionAndAnswer);
+const description = 'Find the greatest common divisor of given numbers';
+export default () => runEngine(description, generateQuestionAndAnswer);
